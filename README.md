@@ -1,14 +1,14 @@
 # 🤟 LibrasFlow
 
 <p align="center">
-  <img src="assets/banner_librasflow.png" alt="LibrasFlow Banner - Tradutor de LIBRAS em Tempo Real com IA & Visão Computacional" width="100%">
+  <img src="assets/banner_librasflow.png" alt="LibrasFlow Banner" width="100%">
 </p>
 
 <p align="center">
-  ![Python](https://img.shields.io/badge/python-3.11-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-  ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
-  ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-  ![Mediapipe](https://img.shields.io/badge/Mediapipe-0473FF?style=for-the-badge&logo=google&logoColor=white)
+  <img src="https://img.shields.io/badge/python-3.11-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+  <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+  <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
+  <img src="https://img.shields.io/badge/Mediapipe-0473FF?style=for-the-badge&logo=google&logoColor=white" alt="Mediapipe">
 </p>
 
 <p align="center">
@@ -16,13 +16,6 @@
 </p>
 
 ---
-
-# 🤟 LIBRAS Vision: Reconhecimento e Tradução em Tempo Real
-
-![Python](https://img.shields.io/badge/python-3.11-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Mediapipe](https://img.shields.io/badge/Mediapipe-0473FF?style=for-the-badge&logo=google&logoColor=white)
 
 
 Este projeto utiliza **Visão Computacional** e **Inteligência Artificial** para traduzir o alfabeto da Língua Brasileira de Sinais (LIBRAS) em tempo real. Através da captura de landmarks das mãos, o sistema classifica o sinal, forma frases e oferece uma interface interativa diretamente na câmera.
