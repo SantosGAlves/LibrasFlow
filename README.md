@@ -44,7 +44,7 @@ O projeto segue um pipeline de Machine Learning clássico:
 
 | Métrica | Valor |
 | :--- | :--- |
-| **Acurácia Geral** | 0.00% |
+| **Acurácia Geral** | 100.0% |
 | **Algoritmo** | Random Forest |
 | **Ambiente** | Python 3.11 |
 
