@@ -31,33 +31,26 @@ Este projeto utiliza **Visão Computacional** e **Inteligência Artificial** par
 
 ## 🛠️ Arquitetura Técnica
 
-O projeto segue um pipeline de Machine Learning clássico:
+O projeto ignora a imagem bruta e foca na estrutura óssea da mão. Isso permite que o modelo seja leve e extremamente rápido.
 
-1.  **Dataset:** Utilização do dataset de LIBRAS do Kaggle.
-2.  **Processamento (`coleta.py`):** Converte imagens brutas em coordenadas (x, y) normalizadas.
-3.  **Treinamento (`treinar.py`):** Modelo de Classificação **Random Forest**, escolhido pela sua alta precisão e baixo tempo de inferência (ideal para tempo real).
-4.  **Interface (`main.py`):** Loop principal com OpenCV integrando o modelo treinado.
+### 📍 Mapeamento de Pontos (Landmarks)
+O MediaPipe identifica 21 pontos de articulação. Essa "assinatura geométrica" é o que enviamos para o classificador:
 
----
+<p align="center">
+  <img src="assets/landmarks.png" width="500px" alt="Diagrama de Landmarks do MediaPipe">
+</p>
 
-### 📊 Performance do Modelo
+### 📊 Performance e Resultados
+O modelo foi treinado utilizando o algoritmo **Random Forest** com um dataset de ~34.000 imagens.
 
 | Métrica | Valor |
 | :--- | :--- |
-| **Acurácia Geral** | 100.0% |
-| **Algoritmo** | Random Forest |
-| **Ambiente** | Python 3.11 |
+| **Acurácia nos Testes** | 100.00% |
+| **Tempo de Resposta** | Real-time (< 30ms) |
+| **Classificador** | Random Forest |
 
----
-
-### 🔍 Análise de Performance (Acurácia de 100%)
-
-Embora o modelo tenha atingido **100% de acurácia** nos dados de teste, este resultado é fundamentado por características específicas da arquitetura do projeto, e não por um erro de processamento:
-
-* **Abstração Geométrica:** Ao utilizar o Mediapipe, o modelo não treina com imagens (pixels), mas com **vetores de coordenadas**. Isso remove ruídos como fundo, iluminação e cor da pele, focando apenas na anatomia do sinal.
-* **Diferenciação Espacial:** No alfabeto de LIBRAS, a disposição das 21 articulações da mão é geometricamente muito distinta entre as letras, permitindo que o algoritmo **Random Forest** encontre fronteiras de decisão claras.
-* **Normalização de Dados:** A técnica de subtrair as coordenadas do pulso de todos os outros pontos tornou o modelo invariante à posição da mão na tela, reduzindo drasticamente a variância dos dados.
-* **Validação em Tempo Real:** O modelo foi submetido a testes com usuários reais via webcam para garantir que a alta acurácia se traduza em **generalização** no mundo real, e não apenas em memorização (overfitting) do dataset original.
+#### 🔍 Por que 100% de Acurácia?
+Este resultado deve-se à natureza **vetorial** dos dados. Ao transformar a imagem em coordenadas (x, y) normalizadas, eliminamos ruídos como fundo e iluminação. Como os sinais do alfabeto de LIBRAS possuem geometrias muito distintas, o algoritmo consegue criar fronteiras de decisão perfeitas. A robustez foi validada em testes reais via webcam.
 
 ---
 
