@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="assets/banner_projeto.png" alt="LibrasVision AI Banner">
+</p>
+
+# <p align="center"> 🤟 LibrasVision AI </p>
+<p align="center">
+  <i>Tradutor Inteligente de Língua Brasileira de Sinais em Tempo Real</i>
+</p>
+
 # 🤟 LIBRAS Vision: Reconhecimento e Tradução em Tempo Real
 
 ![Python](https://img.shields.io/badge/python-3.11-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
