@@ -112,6 +112,5 @@ python scripts/main.py
 - [ ] Criar suporte para detecção de ambas as mãos simultaneamente.
 - [ ] Exportar o modelo para rodar no navegador via TensorFlow.js.
 
----
 > *Este projeto foi desenvolvido para fins de estudo em Inteligência Artificial e Acessibilidade.*
 ```
