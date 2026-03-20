@@ -97,7 +97,7 @@ O projeto não utiliza diretamente a imagem bruta. Em vez disso, trabalha com a 
 │   └── main.py         # Execução em tempo real
 ├── requirements.txt
 └── README.md
-
+```
 ## 📂 Estrutura do Repositório
 
 ```text
