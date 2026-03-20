@@ -95,17 +95,6 @@ python scripts/treinar.py
 python scripts/main.py
 ```
 
----
-
-## 📸 Screenshots
-
-<p align="center">
-  <img src="assets/screenshot1.png" width="400px" alt="Exemplo de Letra A">
-  <img src="assets/screenshot2.png" width="400px" alt="Exemplo de Letra B">
-</p>
-
----
-
 ## 🚀 Próximos Passos (Roadmap)
 
 - [ ] Implementar reconhecimento de sinais que envolvem movimento (letras J, K, X, Z).
