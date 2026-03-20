@@ -57,7 +57,7 @@ O modelo foi treinado utilizando o algoritmo **Random Forest** com um dataset de
 
 | Métrica | Valor |
 | :--- | :--- |
-| **Acurácia nos Testes** | 100.00% |
+| **Acurácia nos Testes** | ~ 99.00% (ambiente controlado) |
 | **Tempo de Resposta** | Real-time (< 30ms) |
 | **Classificador** | Random Forest |
 
