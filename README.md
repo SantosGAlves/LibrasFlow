@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner_projeto.png" alt="LibrasVision AI Banner">
+  <img src="assets/banner_librasflow.png" alt="LibrasVision AI Banner">
 </p>
 
 # <p align="center"> 🤟 LibrasVision AI </p>
