@@ -25,7 +25,6 @@ Este projeto utiliza **Visão Computacional** e **Inteligência Artificial** par
 * **Normalização de Coordenadas:** Algoritmo de compensação que subtrai a posição do pulso de todos os outros pontos, permitindo o reconhecimento em qualquer parte do vídeo.
 * **Filtro de Estabilidade:** Sistema que exige a manutenção do sinal por 30 frames consecutivos para confirmar a letra, evitando detecções falsas.
 * **UI In-Camera (Botão Virtual):** Um botão interativo na tela que pode ser acionado ao "tocar" com o dedo indicador por 1.5 segundos.
-* **Edição em Tempo Real:** Atalhos para `Espaço` (separar palavras) e `Backspace` (corrigir erros).
 
 ---
 
