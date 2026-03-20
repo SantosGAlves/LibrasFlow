@@ -12,7 +12,7 @@ Este projeto utiliza **Visão Computacional** e **Inteligência Artificial** par
 ## 📺 Demonstração
 
 <p align="center">
-  <img src="assets/demonstracao.gif" alt="Demonstração do Projeto" width="700px">
+  <img src="assets/teste.gif" alt="Demonstração do Projeto" width="700px">
   <br>
   <em>Legenda: O sistema reconhecendo sinais e utilizando o botão virtual para limpar a frase.</em>
 </p>
@@ -112,6 +112,5 @@ python scripts/main.py
 - [ ] Criar suporte para detecção de ambas as mãos simultaneamente.
 - [ ] Exportar o modelo para rodar no navegador via TensorFlow.js.
 
----
 > *Este projeto foi desenvolvido para fins de estudo em Inteligência Artificial e Acessibilidade.*
 ```
