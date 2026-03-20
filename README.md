@@ -1,11 +1,21 @@
+# 🤟 LibrasFlow
+
 <p align="center">
-  <img src="assets/banner_librasflow.png" alt="LibrasVision AI Banner">
+  <img src="assets/banner_librasflow.png" alt="LibrasFlow Banner - Tradutor de LIBRAS em Tempo Real com IA & Visão Computacional" width="100%">
 </p>
 
-# <p align="center"> 🤟 LibrasVision AI </p>
 <p align="center">
-  <i>Tradutor Inteligente de Língua Brasileira de Sinais em Tempo Real</i>
+  ![Python](https://img.shields.io/badge/python-3.11-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+  ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+  ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+  ![Mediapipe](https://img.shields.io/badge/Mediapipe-0473FF?style=for-the-badge&logo=google&logoColor=white)
 </p>
+
+<p align="center">
+  <i>Um tradutor inteligente de Língua Brasileira de Sinais em tempo real, unindo visão computacional e aprendizado de máquina para promover a acessibilidade.</i>
+</p>
+
+---
 
 # 🤟 LIBRAS Vision: Reconhecimento e Tradução em Tempo Real
 
