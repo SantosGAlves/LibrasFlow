@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrasFlow - Tradutor Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-white min-h-screen font-sans selection:bg-blue-500">
+
+    <nav class="border-b border-slate-800 bg-slate-950 p-4 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center gap-3">
+            <i class="fa-solid fa-hands-asl-interpreting text-blue-500 text-3xl"></i>
+            <h1 class="text-2xl font-bold tracking-tight">Libras<span class="text-blue-500">Flow</span></h1>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
+        
+        <div class="lg:col-span-2 space-y-6">
+            
+            <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 relative">
+                <div class="absolute top-4 left-4 bg-red-500/80 text-white text-xs px-3 py-1 rounded-full font-semibold animate-pulse flex items-center gap-2 z-10">
+                    <div class="w-2 h-2 bg-white rounded-full"></div> AO VIVO
+                </div>
+                
+                <img src="{{ url_for('video_feed') }}" alt="Câmera LibrasFlow" class="w-full h-auto object-contain bg-black" />
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex gap-4 items-start">
+                <div class="bg-blue-500/20 p-3 rounded-xl text-blue-400">
+                    <i class="fa-solid fa-circle-info text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-1">Como usar</h3>
+                    <p class="text-slate-400 text-sm">Faça o sinal na frente da câmera. Segure a posição até a barra verde encher para confirmar a letra. Coloque a mão sobre o botão "LIMPAR" no vídeo para apagar a frase.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 h-[650px] flex flex-col">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-blue-500"></i> Guia do Alfabeto
+            </h2>
+            <p class="text-slate-400 text-sm mb-4">Consulte os sinais estáticos para treinar com a Inteligência Artificial.</p>
+            
+            <div class="overflow-y-auto pr-2 custom-scrollbar grid grid-cols-3 gap-3 flex-1">
+                <script>
+                    const baseImagePath = "/static/alfabeto/";
+                    const letras = 'ABCDEFGHILMNOPQRSTUVWY'.split('');
+                    
+                    letras.forEach(letra => {
+                        document.write(`
+                            <div class="bg-slate-700 rounded-xl p-3 flex flex-col items-center justify-center hover:bg-slate-600 transition-colors border border-slate-600 group cursor-pointer">
+                                <span class="text-2xl font-black text-slate-300 mb-2 group-hover:text-blue-400 transition-colors">${letra}</span>
+                                
+                                <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-inner">
+                                    <img 
+                                        src="${baseImagePath}${letra}.png" 
+                                        alt="Sinal em Libras da letra ${letra}" 
+                                        class="w-full h-full object-cover transform scale-125 group-hover:scale-150 transition-transform duration-300"
+                                        onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fa-solid fa-image text-slate-300 text-2xl\\'></i>'"
+                                    >
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+    </style>
+</body>
+</html>
