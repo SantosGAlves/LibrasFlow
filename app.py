@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Carregando o modelo e o MediaPipe
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CAMINHO_MODELO = os.path.join(BASE_DIR, 'models', 'modelo_libras.p')
+CAMINHO_MODELO = os.path.join(BASE_DIR, 'models', 'modelo_libras_sem_vazamento.p')
 
 with open(CAMINHO_MODELO, 'rb') as f:
     model = pickle.load(f)

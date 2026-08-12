@@ -58,7 +58,7 @@ CAMINHO_MODELO_NOVO = os.path.join(PASTA_MODELO, "modelo_libras_sem_vazamento.p"
 SAIDA_FIGURA = os.path.join(PASTA_MODELO, "matriz_confusao_sem_vazamento.png")
 SAIDA_RELATORIO = os.path.join(PASTA_MODELO, "classification_report_sem_vazamento.txt")
 
-EPS_PADRAO = 0.05  # abaixo do p90 (~0.057) da distancia intra-classe: agrupa so quase-duplicatas
+EPS_PADRAO = 0.10  # abaixo do p90 (~0.057) da distancia intra-classe: agrupa so quase-duplicatas
 SEED = 42
 
 

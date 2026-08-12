@@ -4,7 +4,7 @@ import pickle
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CAMINHO_MODELO = os.path.join(BASE_DIR, 'models', 'modelo_libras.p')
+CAMINHO_MODELO = os.path.join(BASE_DIR, 'models', 'modelo_libras_sem_vazamento.p')
 
 FRAMES_PARA_CONFIRMAR_LETRA = 30  
 FRAMES_PARA_ACIONAR_BOTAO = 25    
