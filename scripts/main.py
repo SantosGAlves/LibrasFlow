@@ -1,7 +1,6 @@
 import cv2
 import mediapipe as mp
 import pickle
-import numpy as np
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,6 +75,10 @@ while True:
 
                 for lm in hand_landmarks.landmark:
                     coordenadas.extend([lm.x - id0_x, lm.y - id0_y])
+                
+                max_val = max(list(map(abs, coordenadas)))
+                if max_val != 0:
+                    coordenadas = [c / max_val for c in coordenadas]
                 
                 predicao = model.predict([coordenadas])[0]
                 cv2.putText(frame, f"Letra: {predicao}", (x_dedo+20, y_dedo), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)

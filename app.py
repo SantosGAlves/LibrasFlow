@@ -78,7 +78,15 @@ def gerar_frames():
 
                     for lm in hand_landmarks.landmark:
                         coordenadas.extend([lm.x - id0_x, lm.y - id0_y])
-                    
+
+                    # IMPORTANTE: mesma normalizacao de escala usada em coleta.py/treinar.py.
+                    # Sem isso, os vetores de entrada ficam fora da distribuicao em que o
+                    # modelo foi treinado (apenas centralizados, sem escala), o que faz o
+                    # RandomForest "colapsar" quase sempre na mesma classe.
+                    max_val = max(list(map(abs, coordenadas)))
+                    if max_val != 0:
+                        coordenadas = [c / max_val for c in coordenadas]
+
                     predicao = model.predict([coordenadas])[0]
                     cv2.putText(frame, f"Letra: {predicao}", (x_dedo+20, y_dedo), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
